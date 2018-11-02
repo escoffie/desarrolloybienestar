@@ -1,0 +1,59 @@
+/* Bootstrap overrides */
+
+$theme-colors: (
+    "primary": #0044c6,
+    "secondary": #3fa600,
+);
+
+$enable-gradients: true;
+
+@import "../../../../../../node_modules/bootstrap/scss/bootstrap";
+
+/* VARIABLES */
+
+$font-family: 'Roboto', sans-serif; /* Pesonalizar en functions.php igual */
+
+/* Classes */
+.bg-gloss {
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.15) 51%, rgba(0,0,0,0.05));
+    background-repeat: repeat-x;
+}
+
+.bg-radial {
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+}
+
+.entry-title{
+    color: theme_color("primary");
+    &::first-letter {
+        font-weight: bold;
+    }
+}
+
+.metaslider .nivo-caption {
+    font-size: 2em;
+    max-width:40%;
+    left:20px;
+    bottom:30%;
+    right:auto;
+    top:auto;
+    background-color: rgba( theme_color("secondary"), 0.75 );
+    color: white !important;
+    text-transform: uppercase;
+}
+
+/* Elements */
+
+body {
+    font-family: $font-family;
+}
+
+.home {
+    .entry-title {
+        display: none;
+    }
+}
+
+footer.site-footer {
+    border-bottom: solid 2em theme_color("secondary");
+}
